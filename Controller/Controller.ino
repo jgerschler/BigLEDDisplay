@@ -48,16 +48,16 @@ void setup() {
 
 void loop() {
     digitalWrite(ANODE1, HIGH);
-    delay(1000)
+    delay(1000);
     digitalWrite(ANODE1, LOW);
     digitalWrite(ANODE2, HIGH);
-    delay(1000)
+    delay(1000);
     digitalWrite(ANODE2, LOW);
     digitalWrite(ANODE3, HIGH);
-    delay(1000)
+    delay(1000);
     digitalWrite(ANODE3, LOW);
     digitalWrite(ANODE4, HIGH);
-    delay(1000)
+    delay(1000);
     digitalWrite(ANODE4, LOW);
     digitalWrite(ANODE1, HIGH);
 };
