@@ -59,5 +59,5 @@ void loop() {
     digitalWrite(ANODE4, HIGH);
     delay(1000)
     digitalWrite(ANODE4, LOW);
-    digitalWrite(ANODE2, HIGH);
+    digitalWrite(ANODE1, HIGH);
 };
