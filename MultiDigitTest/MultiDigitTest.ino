@@ -59,7 +59,7 @@ void digit3() {
 };
 
 void digit4() {
-  digitalWrite(A, HIGH);
+  digitalWrite(A, LOW);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
   digitalWrite(D, LOW);
@@ -219,10 +219,4 @@ void setup() {
 // main loop
 void loop() {
   displayMultipleDigits(1234);
-    delay(2000);
-    displayMultipleDigits(9876);
-    delay(2000);
-    displayMultipleDigits(543);
-    delay(2000);
-    displayMultipleDigits(21);
 };
