@@ -166,7 +166,6 @@ void displaySingleDigit (int digit) {
 
 // function to display multiple digits
 void displayMultipleDigits (int value) {
-	
 	// thousands place
 	displaySingleDigit(value/1000);
 	digitalWrite(ANODE1, HIGH);
@@ -199,12 +198,10 @@ void displayMultipleDigits (int value) {
 	digitalWrite(ANODE4, HIGH);
 	
 	delay(1);
-	
 };
 
 // setup
 void setup() {
-	
 	pinMode(A, OUTPUT);
 	pinMode(B, OUTPUT);
 	pinMode(C, OUTPUT);
@@ -217,15 +214,15 @@ void setup() {
 	pinMode(ANODE2, OUTPUT);
 	pinMode(ANODE3, OUTPUT);
 	pinMode(ANODE4, OUTPUT);	
-	
 };
 
 // main loop
 void loop() {
-	
-	
-	displaySingleDigit(i);
-	
-
-	
+	displayMultipleDigits(1234);
+    delay(2000);
+    displayMultipleDigits(9876);
+    delay(2000);
+    displayMultipleDigits(543);
+    delay(2000);
+    displayMultipleDigits(21);
 };
