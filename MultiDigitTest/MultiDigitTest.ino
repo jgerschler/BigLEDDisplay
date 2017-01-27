@@ -3,12 +3,12 @@ Test script for displaying multidigit numbers.
 */
 
 // segment  - pin number 
-#define A 22
-#define B 23
-#define C 24
-#define D 25
-#define E 26
-#define F 27
+#define A 23
+#define B 22
+#define C 27
+#define D 26
+#define E 25
+#define F 24
 #define G 28
 
 // common anodes
