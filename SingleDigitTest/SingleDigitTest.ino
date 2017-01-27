@@ -192,6 +192,7 @@ void loop() {
   digit2();
   delay(1);
   digitalWrite(ANODE2, LOW);
+  /*digitalWrite(ANODE2, LOW);
   digitalWrite(ANODE3, HIGH);
   digit3();
   delay(1);
@@ -199,5 +200,5 @@ void loop() {
   digitalWrite(ANODE4, HIGH);
   digit4();
   delay(1);
-  digitalWrite(ANODE4, LOW);
+  digitalWrite(ANODE4, LOW);*/
 };
