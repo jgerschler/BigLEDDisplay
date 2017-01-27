@@ -12,10 +12,10 @@ Test script for displaying multidigit numbers.
 #define G 28
 
 // common anodes
-#define ANODE1 52
-#define ANODE2 53
-#define ANODE3 50
-#define ANODE4 51
+#define ANODE1 50
+#define ANODE2 51
+#define ANODE3 52
+#define ANODE4 53
 
 // digit display functions
 void digit0() {
