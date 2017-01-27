@@ -27,7 +27,6 @@ int i=0;
 // digit display functions
 
 void digit0() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -35,11 +34,9 @@ void digit0() {
 	digitalWrite(E, HIGH);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, LOW);
-	
 };
 
 void digit1() {
-	
 	digitalWrite(A, LOW);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -47,11 +44,9 @@ void digit1() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, LOW);
 	digitalWrite(G, LOW);
-	
 };
 
 void digit2() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, LOW);
@@ -59,11 +54,9 @@ void digit2() {
 	digitalWrite(E, HIGH);
 	digitalWrite(F, LOW);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit3() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -71,11 +64,9 @@ void digit3() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, LOW);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit4() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -83,11 +74,9 @@ void digit4() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit5() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, LOW);
 	digitalWrite(C, HIGH);
@@ -95,11 +84,9 @@ void digit5() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit6() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, LOW);
 	digitalWrite(C, HIGH);
@@ -107,11 +94,9 @@ void digit6() {
 	digitalWrite(E, HIGH);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit7() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -119,11 +104,9 @@ void digit7() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, LOW);
 	digitalWrite(G, LOW);
-	
 };
 
 void digit8() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -131,11 +114,9 @@ void digit8() {
 	digitalWrite(E, HIGH);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, HIGH);
-	
 };
 
 void digit9() {
-	
 	digitalWrite(A, HIGH);
 	digitalWrite(B, HIGH);
 	digitalWrite(C, HIGH);
@@ -143,13 +124,10 @@ void digit9() {
 	digitalWrite(E, LOW);
 	digitalWrite(F, HIGH);
 	digitalWrite(G, HIGH);
-	
 };
 
-// function to display desired digit
-
+// function to display single digit
 void displaySingleDigit (int digit) {
-	
 	switch(digit) {
 		
 		case 0:
@@ -190,14 +168,11 @@ void displaySingleDigit (int digit) {
 
 		case 9:
 			digit9();
-			break;
-			
+			break;	
 	}
-	
 };
 
 // function to display multiple digits
-
 void displayMultipleDigits (int value) {
 	
 	// thousands place
