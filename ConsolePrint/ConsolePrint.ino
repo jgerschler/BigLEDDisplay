@@ -1,8 +1,8 @@
 
 int x = 0;
-int starting_sec = 654;
-int starting_min = starting_sec / 60.0;
-int starting_min2 = starting_sec / 60;
+int starting_time = 654;
+int starting_min = starting_time / 60;
+int starting_sec = starting_time % 60;
 
 void setup() {
   Serial.begin(9600);    
@@ -10,8 +10,8 @@ void setup() {
 
 void loop() {
   Serial.print("The time is:\n");
-  Serial.print(String(starting_sec)+"\n");
-  Serial.print(starting_min);
+  Serial.print(String(starting_min)+"\n");
+  Serial.print(starting_sec);
   delay(1000);
   starting_sec-=1;
 }
