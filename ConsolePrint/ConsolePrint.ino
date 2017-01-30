@@ -20,7 +20,7 @@ void loop() {
     starting_min = starting_time / 60;
     starting_sec = starting_time % 60;
     Serial.println("The time is:");
-    Serial.println(String(starting_min+":"+String(starting_sec)));
+    Serial.println(String(starting_min)+":"+String(starting_sec));
   }
 }
 
