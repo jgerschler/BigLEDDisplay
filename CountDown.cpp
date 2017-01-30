@@ -24,7 +24,7 @@ int timer=0;
 
 int i=0;
 
-// digit display functions
+// digit display functions -- update as necessary
 
 void digit0() {
 	digitalWrite(A, HIGH);
