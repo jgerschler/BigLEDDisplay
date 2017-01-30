@@ -1,5 +1,3 @@
-#include stdio.h
-
 int x = 0;
 int starting_time = 654;
 int starting_min = starting_time / 60;
