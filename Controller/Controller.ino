@@ -1,5 +1,6 @@
 /*
-7-Segment counter for homemade display using four digits, common anodes.
+ * CONTROLLER TESTING SCRIPT
+7-Segment homemade display using four digits, common anodes.
 Segment letters begin at top segment (A), going clockwise. Center segment is G.
 */
 

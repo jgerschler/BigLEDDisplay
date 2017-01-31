@@ -1,5 +1,5 @@
 /*
-Test script for displaying multidigit numbers.
+Test script for displaying single numbers.
 */
 
 // segment  - pin number 
