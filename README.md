@@ -1,4 +1,4 @@
 # BigLEDDisplay
 Arduino scripts for large homemade LED display
 
-THIS IS CURRENTLY UNFINISHED! Readme will be updated when project reached an alpha development level.
+These scripts are for a common-anode display. More details may be added in the future depending upon external interest.
