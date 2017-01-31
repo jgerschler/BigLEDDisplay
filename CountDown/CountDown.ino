@@ -184,8 +184,13 @@ void setup() {
 
 void loop() {
   unsigned long currentMillis = millis();
+  if (currentMillis - refreshMillis >= refreshInterval) {
+    refreshMillis = currentMillis;
+    // display refresh goes here
+  }
+  }
   if (currentMillis - clockMillis >= clockInterval) {
-    previousMillis = currentMillis;
+    clockMillis = currentMillis;
     starting_time-=1;
     int starting_min = starting_time / 60;
     int starting_sec = starting_time % 60;
