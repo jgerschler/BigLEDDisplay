@@ -14,9 +14,7 @@
 #define ANODE4 53
 
 int x = 0;
-int starting_time = 654;
-int starting_min = starting_time / 60;
-int starting_sec = starting_time % 60;
+int starting_time = 654;// starting time in seconds
 unsigned long previousMillis = 0;
 const long interval = 1000;
 
@@ -179,11 +177,7 @@ void setup() {
   pinMode(ANODE1, OUTPUT);
   pinMode(ANODE2, OUTPUT);
   pinMode(ANODE3, OUTPUT);
-  pinMode(ANODE4, OUTPUT);  
-
-  Serial.begin(9600);
-  Serial.println("The time is:");
-  Serial.println(String(starting_min+":"+String(starting_sec)));    
+  pinMode(ANODE4, OUTPUT);    
 }
 
 void loop() {
@@ -191,10 +185,8 @@ void loop() {
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
     starting_time-=1;
-    starting_min = starting_time / 60;
-    starting_sec = starting_time % 60;
-    Serial.println("The time is:");
-    Serial.println(String(starting_min)+":"+String(starting_sec));
+    int starting_min = starting_time / 60;
+    int starting_sec = starting_time % 60;
   }
 }
 
