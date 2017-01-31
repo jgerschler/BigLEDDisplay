@@ -15,9 +15,11 @@
 
 int x = 0;
 int starting_time = 654;// starting time in seconds
+int starting_min = starting_time / 60;
+int starting_sec = starting_time % 60;
 unsigned long refreshMillis = 0;
 unsigned long clockMillis = 0;
-const long refreshInterval = 1;
+const long refreshInterval = 10;
 const long clockInterval = 1000;
 
 // digit display functions
@@ -182,18 +184,36 @@ void setup() {
   pinMode(ANODE4, OUTPUT);    
 }
 
+void displayOut(){
+  int digit1 = starting_min / 10;
+  int digit2 = starting_min % 10;
+  int digit3 = starting_sec / 10;
+  int digit4 = starting_sec % 10;
+  digitalWrite(ANODE1, HIGH);
+  displaySingleDigit(digit1);
+  digitalWrite(ANODE1, LOW);
+  digitalWrite(ANODE2, HIGH);
+  displaySingleDigit(digit2);
+  digitalWrite(ANODE2, LOW);
+  digitalWrite(ANODE3, HIGH);  
+  displaySingleDigit(digit3);
+  digitalWrite(ANODE3, LOW);
+  digitalWrite(ANODE4, HIGH);
+  displaySingleDigit(digit4);
+  digitalWrite(ANODE4, LOW);
+}
+
 void loop() {
   unsigned long currentMillis = millis();
   if (currentMillis - refreshMillis >= refreshInterval) {
     refreshMillis = currentMillis;
-    // display refresh goes here
-  }
+    displayOut();
   }
   if (currentMillis - clockMillis >= clockInterval) {
     clockMillis = currentMillis;
     starting_time-=1;
-    int starting_min = starting_time / 60;
-    int starting_sec = starting_time % 60;
+    starting_min = starting_time / 60;
+    starting_sec = starting_time % 60;
   }
 }
 
