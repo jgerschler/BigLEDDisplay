@@ -26,7 +26,7 @@ void digit0() {
   digitalWrite(E, HIGH);
   digitalWrite(F, HIGH);
   digitalWrite(G, LOW);
-};
+}
 
 void digit1() {
   digitalWrite(A, LOW);
@@ -36,7 +36,7 @@ void digit1() {
   digitalWrite(E, LOW);
   digitalWrite(F, LOW);
   digitalWrite(G, LOW);
-};
+}
 
 void digit2() {
   digitalWrite(A, HIGH);
@@ -46,7 +46,7 @@ void digit2() {
   digitalWrite(E, HIGH);
   digitalWrite(F, LOW);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit3() {
   digitalWrite(A, HIGH);
@@ -56,7 +56,7 @@ void digit3() {
   digitalWrite(E, LOW);
   digitalWrite(F, LOW);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit4() {
   digitalWrite(A, LOW);
@@ -66,7 +66,7 @@ void digit4() {
   digitalWrite(E, LOW);
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit5() {
   digitalWrite(A, HIGH);
@@ -76,7 +76,7 @@ void digit5() {
   digitalWrite(E, LOW);
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit6() {
   digitalWrite(A, HIGH);
@@ -86,7 +86,7 @@ void digit6() {
   digitalWrite(E, HIGH);
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit7() {
   digitalWrite(A, HIGH);
@@ -96,7 +96,7 @@ void digit7() {
   digitalWrite(E, LOW);
   digitalWrite(F, LOW);
   digitalWrite(G, LOW);
-};
+}
 
 void digit8() {
   digitalWrite(A, HIGH);
@@ -106,7 +106,7 @@ void digit8() {
   digitalWrite(E, HIGH);
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
-};
+}
 
 void digit9() {
   digitalWrite(A, HIGH);
@@ -116,7 +116,7 @@ void digit9() {
   digitalWrite(E, LOW);
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
-};
+}
 
 // function to display single digit
 void displaySingleDigit (int digit) {
@@ -162,7 +162,7 @@ void displaySingleDigit (int digit) {
       digit9();
       break;  
   }
-};
+}
 
 // function to display multiple digits
 void displayMultipleDigits (int value) {
@@ -198,7 +198,7 @@ void displayMultipleDigits (int value) {
   digitalWrite(ANODE4, HIGH);
   
   delay(1);
-};
+}
 
 // setup
 void setup() {
@@ -214,9 +214,9 @@ void setup() {
   pinMode(ANODE2, OUTPUT);
   pinMode(ANODE3, OUTPUT);
   pinMode(ANODE4, OUTPUT);  
-};
+}
 
 // main loop
 void loop() {
   displayMultipleDigits(1234);
-};
+}
