@@ -15,8 +15,10 @@
 
 int x = 0;
 int starting_time = 654;// starting time in seconds
-unsigned long previousMillis = 0;
-const long interval = 1000;
+unsigned long refreshMillis = 0;
+unsigned long clockMillis = 0;
+const long refreshInterval = 1;
+const long clockInterval = 1000;
 
 // digit display functions
 void digit0() {
@@ -182,7 +184,7 @@ void setup() {
 
 void loop() {
   unsigned long currentMillis = millis();
-  if (currentMillis - previousMillis >= interval) {
+  if (currentMillis - clockMillis >= clockInterval) {
     previousMillis = currentMillis;
     starting_time-=1;
     int starting_min = starting_time / 60;
