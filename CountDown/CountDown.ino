@@ -14,7 +14,7 @@
 #define ANODE4 53
 
 int x = 0;
-int starting_time = 654;// starting time in seconds
+int starting_time = 3000;// starting time in seconds
 int starting_min = starting_time / 60;
 int starting_sec = starting_time % 60;
 unsigned long refreshMillis = 0;
@@ -191,24 +191,27 @@ void displayOut(){
   int digit4 = starting_sec % 10;
   digitalWrite(ANODE1, HIGH);
   displaySingleDigit(digit1);
+  delay(1);
   digitalWrite(ANODE1, LOW);
   digitalWrite(ANODE2, HIGH);
   displaySingleDigit(digit2);
+  delay(1);
   digitalWrite(ANODE2, LOW);
   digitalWrite(ANODE3, HIGH);  
   displaySingleDigit(digit3);
+  delay(1);
   digitalWrite(ANODE3, LOW);
   digitalWrite(ANODE4, HIGH);
   displaySingleDigit(digit4);
+  delay(1);
   digitalWrite(ANODE4, LOW);
 }
 
 void loop() {
   unsigned long currentMillis = millis();
-  if (currentMillis - refreshMillis >= refreshInterval) {
-    refreshMillis = currentMillis;
-    displayOut();
-  }
+
+  displayOut();
+
   if (currentMillis - clockMillis >= clockInterval) {
     clockMillis = currentMillis;
     starting_time-=1;
