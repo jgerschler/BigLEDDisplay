@@ -189,20 +189,21 @@ void displayOut(){
   int digit2 = starting_min % 10;
   int digit3 = starting_sec / 10;
   int digit4 = starting_sec % 10;
-  digitalWrite(ANODE1, HIGH);
+  
   displaySingleDigit(digit1);
+  digitalWrite(ANODE1, HIGH);
   delay(1);
   digitalWrite(ANODE1, LOW);
+  displaySingleDigit(digit2);  
   digitalWrite(ANODE2, HIGH);
-  displaySingleDigit(digit2);
   delay(1);
   digitalWrite(ANODE2, LOW);
-  digitalWrite(ANODE3, HIGH);  
   displaySingleDigit(digit3);
+  digitalWrite(ANODE3, HIGH);  
   delay(1);
   digitalWrite(ANODE3, LOW);
-  digitalWrite(ANODE4, HIGH);
   displaySingleDigit(digit4);
+  digitalWrite(ANODE4, HIGH);
   delay(1);
   digitalWrite(ANODE4, LOW);
 }
