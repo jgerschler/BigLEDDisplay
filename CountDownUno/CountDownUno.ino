@@ -1,17 +1,17 @@
 // segment  - pin number 
-#define A 23
-#define B 22
-#define C 27
-#define D 26
-#define E 25
-#define F 24
-#define G 28
+#define A 2
+#define B 3
+#define C 4
+#define D 5
+#define E 6
+#define F 7
+#define G 8
 
 // common anodes
-#define ANODE1 50
-#define ANODE2 51
-#define ANODE3 52
-#define ANODE4 53
+#define ANODE1 9
+#define ANODE2 10
+#define ANODE3 11
+#define ANODE4 12
 
 int x = 0;
 int starting_time = 3000;// starting time in seconds
