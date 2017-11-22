@@ -14,7 +14,7 @@
 #define ANODE4 12
 
 int x = 0;
-int starting_time = 3000;// starting time in seconds
+int starting_time = 120;// starting time in seconds
 int starting_min = starting_time / 60;
 int starting_sec = starting_time % 60;
 unsigned long refreshMillis = 0;
