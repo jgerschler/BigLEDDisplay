@@ -239,7 +239,7 @@ void loop() {
       buttonState = reading;
 
       if (buttonState == HIGH) {
-        ledState = !ledState;/*alter this*/
+        starting_time = 120;
       }
     }
   }
