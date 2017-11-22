@@ -13,12 +13,18 @@
 #define ANODE3 11
 #define ANODE4 12
 
+#define BUTTON 13
+
 int x = 0;
 int starting_time = 120;// starting time in seconds
 int starting_min = starting_time / 60;
 int starting_sec = starting_time % 60;
+int buttonState;
+int lastButtonState = LOW;
 unsigned long refreshMillis = 0;
 unsigned long clockMillis = 0;
+unsigned long lastDebounceTime = 0;
+unsigned long debounceDelay = 50;
 const long refreshInterval = 10;
 const long clockInterval = 1000;
 
@@ -182,6 +188,8 @@ void setup() {
   pinMode(ANODE2, OUTPUT);
   pinMode(ANODE3, OUTPUT);
   pinMode(ANODE4, OUTPUT);    
+
+  pinMode(BUTTON, INPUT);
 }
 
 void displayOut(){
@@ -210,6 +218,7 @@ void displayOut(){
 
 void loop() {
   unsigned long currentMillis = millis();
+  int reading = digitalRead(BUTTON);
 
   displayOut();
 
@@ -219,5 +228,23 @@ void loop() {
     starting_min = starting_time / 60;
     starting_sec = starting_time % 60;
   }
+
+  if (reading != lastButtonState) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+
+    if (reading != buttonState) {
+      buttonState = reading;
+
+      if (buttonState == HIGH) {
+        ledState = !ledState;/*alter this*/
+      }
+    }
+  }
+
+  lastButtonState = reading;
+
 }
 
