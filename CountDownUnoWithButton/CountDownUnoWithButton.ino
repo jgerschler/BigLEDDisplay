@@ -239,7 +239,7 @@ void loop() {
       buttonState = reading;
 
       if (buttonState == HIGH) {
-        starting_time = 120;
+        starting_time = 121;
       }
     }
   }
