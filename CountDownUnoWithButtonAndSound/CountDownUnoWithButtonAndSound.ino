@@ -1,4 +1,5 @@
 // segment  - pin number 
+
 #define A 2
 #define B 3
 #define C 4
@@ -6,6 +7,7 @@
 #define E 6
 #define F 7
 #define G 8
+#define SPEAKER 1
 
 // common anodes
 #define ANODE1 9
@@ -16,7 +18,8 @@
 #define BUTTON 13
 
 int x = 0;
-int starting_time = 5400;// starting time in seconds
+bool started = 0;
+int starting_time = 15;// starting time in seconds
 int starting_min = starting_time / 60;
 int starting_sec = starting_time % 60;
 int buttonState;
@@ -183,6 +186,7 @@ void setup() {
   pinMode(E, OUTPUT);
   pinMode(F, OUTPUT);
   pinMode(G, OUTPUT);
+  pinMode(SPEAKER, OUTPUT);
   
   pinMode(ANODE1, OUTPUT);
   pinMode(ANODE2, OUTPUT);
@@ -222,11 +226,17 @@ void loop() {
 
   displayOut();
 
-  if (currentMillis - clockMillis >= clockInterval) {
+  if ((currentMillis - clockMillis >= clockInterval) && started == 1) {
     clockMillis = currentMillis;
     starting_time-=1;
+    tone(1, 300, 100);
     starting_min = starting_time / 60;
     starting_sec = starting_time % 60;
+  }
+
+  if (starting_time == 0 && started == 1) {
+    tone(1, 300, 2000);
+    started = 0;
   }
 
   if (reading != lastButtonState) {
@@ -239,7 +249,8 @@ void loop() {
       buttonState = reading;
 
       if (buttonState == HIGH) {
-        starting_time = 1801;
+        starting_time = 16;
+        started = 1;
       }
     }
   }
